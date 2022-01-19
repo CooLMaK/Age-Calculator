@@ -1,4 +1,5 @@
-
+let input1 = document.querySelector('#dob');
+let input2 = document.querySelector("#aad");
 function calculateAge() {
     let startDateInput = document.querySelector('#dob').value;
     let endDateInput = document.querySelector('#aad').value;
@@ -76,7 +77,7 @@ submit.addEventListener('click', () => {
     if (ageObj.years > 0 && ageObj.months == 0 && ageObj.days == 0) {
         result.innerText = ageObj.years + 'Years Old Happy BirthDay!!';
     } else if (ageObj.years == 0 && ageObj.months == 0 && ageObj.days == 0) {
-        result.innerText = 'Welcome To Earth';
+        result.innerText = 'Welcome To Earth!!!';
     } else {
         result.innerText = ageObj.years + ' Year, ' + ageObj.months + ' Months and ' + ageObj.days + ' Days';
     }
@@ -104,5 +105,8 @@ function reset() {
     ageInMonths.innerText = 'Age in Months :';
     ageInWeeks.innerText = 'Age in Weeks :';
     ageInDays.innerText = 'Age in Days :';
+    input1.value = null;
+    input2.value = null;
+
 }
 
